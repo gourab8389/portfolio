@@ -179,9 +179,7 @@ export function Footer() {
               gap: '0.4rem',
             }}
           >
-            Built with
-            <Heart size={12} color="var(--gold-primary)" fill="var(--gold-primary)" />
-            using Next.js & Three.js
+            Made using Next.Js and Three.Js
           </p>
         </div>
       </div>

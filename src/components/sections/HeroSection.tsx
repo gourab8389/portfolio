@@ -170,7 +170,7 @@ export function HeroSection() {
     'Full Stack Developer',
     'MERN Stack Engineer',
     'Next.js Specialist',
-    'TypeScript Enthusiast',
+    'Software Craftsman',
   ]);
 
   const socialLinks = [
