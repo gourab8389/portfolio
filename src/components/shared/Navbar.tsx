@@ -69,7 +69,7 @@ export function Navbar() {
 
           {/* Desktop Nav Links */}
           <div
-            className="hidden md:flex"
+            className="md:flex hidden"
             style={{ alignItems: 'center', gap: '2rem' }}
           >
             {NAV_LINKS.map(({ label, href }) => {
@@ -111,7 +111,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex" style={{ alignItems: 'center', gap: '1rem' }}>
+          <div className="md:flex hidden" style={{ alignItems: 'center', gap: '1rem' }}>
             {githubUrl && (
               <a
                 href={githubUrl}
@@ -149,14 +149,16 @@ export function Navbar() {
           </div>
 
           {/* Mobile Hamburger */}
-          <button
-            className="flex md:hidden btn btn-ghost"
+          <div className="md:hidden">
+            <button
+            className="btn btn-ghost"
             style={{ padding: '0.4rem' }}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
+          </div>
         </div>
       </div>
 

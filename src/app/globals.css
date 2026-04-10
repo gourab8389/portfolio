@@ -700,3 +700,27 @@ body {
     display: none;
   }
 }
+
+.hero-grid {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes cube-rotate {
+  0%   { transform: rotateX(0deg)   rotateY(0deg); }
+  25%  { transform: rotateX(15deg)  rotateY(90deg); }
+  50%  { transform: rotateX(0deg)   rotateY(180deg); }
+  75%  { transform: rotateX(-15deg) rotateY(270deg); }
+  100% { transform: rotateX(0deg)   rotateY(360deg); }
+}

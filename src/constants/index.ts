@@ -20,9 +20,9 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const HERO_STATS = [
-  { value: "2+", label: "Years Experience" },
+  { value: "1+", label: "Years Experience" },
   { value: "5+", label: "Projects Shipped" },
-  { value: "40%", label: "Dev Efficiency" },
+  { value: "70%", label: "Dev Efficiency" },
   { value: "3", label: "AWS Certs" },
 ] as const;
 

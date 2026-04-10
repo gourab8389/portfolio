@@ -55,15 +55,14 @@ export function truncate(str: string, maxLen: number): string {
 }
 
 export function proficiencyToPercent(proficiency: string): number {
+  const num = parseFloat(proficiency);
+  if (!isNaN(num)) return Math.round((num / 5) * 100);
   const map: Record<string, number> = {
-    beginner:     25,
-    elementary:   40,
-    intermediate: 60,
-    advanced:     80,
-    expert:       95,
+    beginner: 25, elementary: 40, intermediate: 60, advanced: 80, expert: 95,
   };
   return map[proficiency.toLowerCase()] ?? 70;
 }
+
 
 export function staggerDelay(index: number, base = 100): number {
   return index * base;
