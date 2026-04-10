@@ -28,6 +28,9 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: `${SITE_META.name} — ${SITE_META.title}`,
   description: `Portfolio of ${SITE_META.name}. ${SITE_META.tagline}. Full Stack Developer specializing in MERN stack, Next.js, and TypeScript.`,
+  icons: {
+    icon: "/favicon.svg",
+  },
   keywords: [
     "Gourab Dey",
     "Full Stack Developer",
