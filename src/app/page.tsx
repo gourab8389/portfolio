@@ -1,7 +1,19 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function HomeClient() {
   return (
-    <div className="">hello, Next.js!</div>
+    <main style={{ minHeight: '100vh' }}>
+      {/* <HeroSection />
+      <SectionDivider />
+      <AboutSection />
+      <SectionDivider />
+      <SkillsSection />
+      <SectionDivider />
+      <ExperienceSection />
+      <SectionDivider />
+      <ProjectsSection />
+      <SectionDivider />
+      <ContactSection />
+      <Footer /> */}
+      hello
+    </main>
   );
 }
