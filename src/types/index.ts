@@ -1,0 +1,124 @@
+export interface ApiResponse<T = unknown> {
+  success: boolean;
+  message: string;
+  data?: T;
+}
+
+export interface Profile {
+  id: number;
+  email: string;
+  name: string;
+  phoneNumber?: string;
+  address?: string;
+  bio?: string;
+  location?: string;
+  website?: string;
+  linkedinUrl?: string;
+  githubUrl?: string;
+  twitterUrl?: string;
+  profileImage?: string;
+  resume?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface Education {
+  id: number;
+  name: string;
+  stream: string;
+  grade: string;
+  degree: string;
+  startDate?: string;
+  endDate?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface Skill {
+  id: number;
+  name: string;
+  proficiency: string;
+  category?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export type ExperienceType =
+  | 'organization'
+  | 'internship'
+  | 'college_event'
+  | 'freelance'
+  | 'full_time';
+
+export interface Experience {
+  id: number;
+  organizationName: string;
+  organizationImage?: string;
+  role: string;
+  description: string;
+  startDate: string;
+  endDate?: string;
+  type: ExperienceType;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export type ProjectType =
+  | 'personal'
+  | 'client'
+  | 'academic'
+  | 'internship'
+  | 'freelance'
+  | 'open_source'
+  | 'company';
+
+export interface Project {
+  id: number;
+  name: string;
+  type: ProjectType;
+  description: string;
+  githubLinks?: string[];
+  isPublic?: boolean;
+  projectLinks?: string[];
+  hasDeployedLink?: boolean;
+  technologies?: string[];
+  image?: string;
+  startDate?: string;
+  endDate?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface Contact {
+  id: number;
+  name: string;
+  email: string;
+  message?: string;
+  isRead: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PortfolioData {
+  profile: Profile;
+  education: Education[];
+  skills: Skill[];
+  experiences: Experience[];
+  projects: Project[];
+}
+
+export interface ContactFormPayload {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export interface SkillGroup {
+  category: string;
+  skills: Skill[];
+}
+
+export interface NavLink {
+  label: string;
+  href: string;
+}
