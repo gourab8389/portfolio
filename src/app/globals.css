@@ -724,3 +724,31 @@ body {
   75%  { transform: rotateX(-15deg) rotateY(270deg); }
   100% { transform: rotateX(0deg)   rotateY(360deg); }
 }
+
+.scroll-section {
+  opacity: 0;
+}
+
+/* From LEFT */
+.scroll-section[data-direction="left"] {
+  transform: translateX(-100px);
+  transition: opacity 0.9s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.scroll-section[data-direction="left"].in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* From RIGHT */
+.scroll-section[data-direction="right"] {
+  transform: translateX(100px);
+  transition: opacity 0.9s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.scroll-section[data-direction="right"].in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
