@@ -33,9 +33,6 @@ function useTypewriter(texts: string[], speed = 80, pause = 2000) {
   return display;
 }
 
-// ============================================================
-// MARQUEE — horizontal scrolling text strip
-// ============================================================
 function Marquee() {
   const items = ['React', 'Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'PostgreSQL', 'Docker', 'AWS', 'Redis', 'TailwindCSS'];
   return (
@@ -74,40 +71,36 @@ function Marquee() {
   );
 }
 
-// ============================================================
-// 3D FLOATING GD CUBE — CSS only, no Three.js
-// ============================================================
 function GDCube() {
-  const size = 140;
-  const half = size / 2;
+  const half = 'clamp(35px, 6vw, 70px)';
 
   const faceBase: React.CSSProperties = {
     position: 'absolute',
-    width: `${size}px`,
-    height: `${size}px`,
+    width: '100%',
+    height: '100%',
     border: '1px solid rgba(240,192,64,0.4)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'var(--font-display)',
-    fontSize: '2.8rem',
+    fontSize: 'clamp(1.2rem, 3vw, 2.8rem)',
     letterSpacing: '0.08em',
     backfaceVisibility: 'hidden',
   };
 
   const faces = [
-    { label: 'GD', transform: `translateZ(${half}px)`,                          bg: 'rgba(240,192,64,0.06)', color: 'var(--gold-primary)', shadow: true },
-    { label: 'GD', transform: `rotateY(180deg) translateZ(${half}px)`,          bg: 'rgba(240,192,64,0.03)', color: 'var(--gold-muted)',   shadow: false },
-    { label: '',   transform: `rotateY(90deg) translateZ(${half}px)`,           bg: 'rgba(240,192,64,0.04)', color: 'transparent',         shadow: false },
-    { label: '',   transform: `rotateY(-90deg) translateZ(${half}px)`,          bg: 'rgba(240,192,64,0.04)', color: 'transparent',         shadow: false },
-    { label: '',   transform: `rotateX(90deg) translateZ(${half}px)`,           bg: 'rgba(240,192,64,0.02)', color: 'transparent',         shadow: false },
-    { label: '',   transform: `rotateX(-90deg) translateZ(${half}px)`,          bg: 'rgba(240,192,64,0.02)', color: 'transparent',         shadow: false },
+    { label: 'GD', transform: `translateZ(${half})`,                         bg: 'rgba(240,192,64,0.06)', color: 'var(--gold-primary)', shadow: true  },
+    { label: 'GD', transform: `rotateY(180deg) translateZ(${half})`,         bg: 'rgba(240,192,64,0.03)', color: 'var(--gold-muted)',   shadow: false },
+    { label: '',   transform: `rotateY(90deg) translateZ(${half})`,          bg: 'rgba(240,192,64,0.04)', color: 'transparent',         shadow: false },
+    { label: '',   transform: `rotateY(-90deg) translateZ(${half})`,         bg: 'rgba(240,192,64,0.04)', color: 'transparent',         shadow: false },
+    { label: '',   transform: `rotateX(90deg) translateZ(${half})`,          bg: 'rgba(240,192,64,0.02)', color: 'transparent',         shadow: false },
+    { label: '',   transform: `rotateX(-90deg) translateZ(${half})`,         bg: 'rgba(240,192,64,0.02)', color: 'transparent',         shadow: false },
   ];
 
   return (
     <div style={{
-      width: `${size}px`,
-      height: `${size}px`,
+      width: 'clamp(70px, 12vw, 140px)',
+      height: 'clamp(70px, 12vw, 140px)',
       perspective: '600px',
       flexShrink: 0,
     }}>
@@ -137,9 +130,6 @@ function GDCube() {
   );
 }
 
-// ============================================================
-// BIG BACKGROUND TEXT — like chkstepan's oversized typography
-// ============================================================
 function BigBgText({ text }: { text: string }) {
   return (
     <div style={{
